@@ -9,7 +9,7 @@ class App {
 
         // Controller
         if( file_exists("./Controllers".$arr[0]."Controller.php") ){
-            $this->__controller = $arr[0];
+            $this->__controller = $arr[0]."Controller";
             unset($arr[0]);
         }
         require_once "./Controllers/". $this->__controller ."Controller.php";
